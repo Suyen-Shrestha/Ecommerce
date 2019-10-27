@@ -22,7 +22,7 @@ class ProductDetailView(DetailView):
     template_name = "products/detail.html"
 
 def product_detail_view(request, pk):
-    instance = get_object_or_404(Product, pk=pk)
+    # instance = get_object_or_404(Product, pk=pk)
     # try:
     #     instance = Product.objects.filter(pk=pk)
     # except Product.DoesNotExist:
@@ -36,7 +36,9 @@ def product_detail_view(request, pk):
     #     instance = qs.first()
     # else:
     #     raise Http404("Product doesn't exist.")
-        
+    instance = Product.objects.get_by_id(pk)
+    if instance is None:
+        raise Http404("Product doesn't exist.")
     context = {
         'object': instance
     }
