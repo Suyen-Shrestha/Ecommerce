@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 from .views import home_page, contact_page, login_page, register_page
 
+from products.views import ProductListView, ProductDetailView
 
 
 urlpatterns = [
@@ -29,6 +30,8 @@ urlpatterns = [
     path('contact/', contact_page),
     path('login/', login_page),
     path('register/', register_page),
+    path('products/', ProductListView.as_view()),
+    path('products/<int:pk>', ProductDetailView.as_view()),
 
 ]
 
