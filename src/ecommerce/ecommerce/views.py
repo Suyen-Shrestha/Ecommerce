@@ -16,7 +16,8 @@ def contact_page(request):
     context = {
         'title': "This is the contact page.",
         'content':"Welcome to the contact page.",
-        'form': contact_form
+        'form': contact_form,
+
     }
     if contact_form.is_valid():
         print(contact_form.cleaned_data)
@@ -26,7 +27,8 @@ def contact_page(request):
 def login_page(request):
     form = LoginForm(request.POST or None)
     context = {
-        'form': form
+        'form': form,
+
     }
     if form.is_valid():
         username = form.cleaned_data.get("username")
