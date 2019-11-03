@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from carts.views import cart_home
 from .views import home_page, contact_page, login_page, register_page
 
 from products.views import ProductListView, ProductDetailView, ProductFeaturedListView, ProductFeaturedDetailView, ProductDetailSlugView
@@ -28,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
     path('contact/', contact_page, name='contact'),
+    path('cart/', include("carts.urls", namespace='cart')),
     path('login/', login_page, name='login'),
     path('register/', register_page, name='register'),
     path('products/', include("products.urls", namespace='product')),
