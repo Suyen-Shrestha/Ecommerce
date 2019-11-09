@@ -1,0 +1,41 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "T-shirt",
+        "slug": "tshirt",
+        "description": "This is a branded t-shirt which makes you look cool.",
+        "price": "1200.35",
+        "image": "products/14636783/14636783.jpg",
+        "featured": false,
+        "timestamp": "2019-11-01T12:44:17.033Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Super computer",
+        "slug": "supercomputer",
+        "description": "This is the fastest super computer.",
+        "price": "102422.55",
+        "image": "products/3689030/3689030.jpg",
+        "featured": true,
+        "timestamp": "2019-11-01T12:44:17.033Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "watch",
+        "slug": "watch",
+        "description": "this is a awsome watch",
+        "price": "35.50",
+        "image": "",
+        "featured": true,
+        "timestamp": "2019-11-01T12:44:17.033Z"
+    }
+}
+]
